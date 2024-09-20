@@ -6,8 +6,8 @@ namespace alex290\widgetContentOld\behaviors;
 
 // use alex290\yii2images\models\Image;
 
-use alex290\widgetContent\models\ContentWidget;
-use alex290\widgetContent\models\WidgetDoc;
+use alex290\widgetContentOld\models\ContentWidget;
+use alex290\widgetContentOld\models\WidgetDoc;
 use Yii;
 use yii\base\Behavior;
 use yii\helpers\Json;

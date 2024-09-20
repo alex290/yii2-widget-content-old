@@ -1,8 +1,8 @@
 <?php
 
-use alex290\widgetContent\assets\ContWidgetAsset;
-use alex290\widgetContent\models\ContentWidget;
-use alex290\widgetContent\models\WidgetDoc;
+use alex290\widgetContentOld\assets\ContWidgetAsset;
+use alex290\widgetContentOld\models\ContentWidget;
+use alex290\widgetContentOld\models\WidgetDoc;
 use yii\helpers\Json;
 
 ContWidgetAsset::register(Yii::$app->view);

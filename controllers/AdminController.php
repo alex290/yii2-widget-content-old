@@ -2,10 +2,10 @@
 
 namespace alex290\widgetContentOld\controllers;
 
-use alex290\widgetContent\models\ContentWidget;
-use alex290\widgetContent\models\WidgetDoc;
-use alex290\widgetContent\models\WidgetImage;
-use alex290\widgetContent\models\WidgetText;
+use alex290\widgetContentOld\models\ContentWidget;
+use alex290\widgetContentOld\models\WidgetDoc;
+use alex290\widgetContentOld\models\WidgetImage;
+use alex290\widgetContentOld\models\WidgetText;
 use Yii;
 use yii\web\Controller;
 

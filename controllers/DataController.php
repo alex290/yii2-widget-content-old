@@ -2,7 +2,7 @@
 
 namespace alex290\widgetContentOld\controllers;
 
-use alex290\widgetContent\models\ContentWidget;
+use alex290\widgetContentOld\models\ContentWidget;
 use yii\helpers\Json;
 use yii\web\Controller;
 

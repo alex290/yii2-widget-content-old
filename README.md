@@ -48,7 +48,7 @@ attach behaviour to your model (be sure that your model has "id" property)
     {
         return [
             'widget' => [
-                'class' => 'alex290\widgetContent\behaviors\Behave',
+                'class' => 'alex290\widgetContentOld\behaviors\Behave',
             ]
         ];
     }
