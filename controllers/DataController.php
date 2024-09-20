@@ -11,7 +11,14 @@ class DataController extends Controller
 
     public function actionSortable($data)
     {
-        $dataFile = Json::decode($data);
+        $dataFile = [];
+        if (is_array($data)) {
+            $dataFile = $data;
+        } else {
+            $dataFile = Json::decode($data);
+        };
+
+        // $dataFile = Json::decode($data);
         if (!is_array($dataFile)) {
             $dataFile = Json::decode($dataFile);
         }

@@ -32,18 +32,26 @@ $data = Json::encode([
                         'widget' => $widget,
                     ]) ?>
                 <?php elseif ($widget->type == 3) : ?>
-                    <?php $dataFile = Json::decode($widget->data);
+                    <?php
+
+                    $dataFile = [];
+                    if (is_array($widget->data)) {
+                        $dataFile = $widget->data;
+                    } else {
+                        $dataFile = Json::decode($widget->data);
+                    };
+                    // $dataFile = Json::decode($widget->data);
                     if (!is_array($dataFile)) {
                         $dataFile = Json::decode($dataFile);
                     }
-                     ?>
+                    ?>
                     <?php if ($dataFile['file'] == null || $dataFile['file'] == '') : ?>
                         <?php
                         $articleDoc = new WidgetDoc();
                         $articleDoc->openModel($widget->id);
                         $articleDoc->deleteFile();
                         $widget->removeImages();
-                        $widget->delete(); 
+                        $widget->delete();
                         ?>
                     <?php else : ?>
                         <?= Yii::$app->view->render('@alex290/widgetContent/tpl/widget/doc', [

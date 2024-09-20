@@ -4,8 +4,14 @@ use yii\helpers\Html;
 use yii\helpers\Json;
 use yii\helpers\Url;
 
+$data = [];
+if (is_array($widget->data)) {
+    $data = $widget->data;
+} else {
+    $data = Json::decode($widget->data);
+};
 
-$data = Json::decode($widget->data);
+// $data = Json::decode($widget->data);
 if (!is_array($data)) {
     $data = Json::decode($data);
 }

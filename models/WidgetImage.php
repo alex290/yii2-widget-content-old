@@ -45,7 +45,15 @@ class WidgetImage extends Model
     {
         $model = ContentWidget::findOne($id);
         if ($model != null) {
-            $data = Json::decode($model->data);
+
+            $data = [];
+            if (is_array($model->data)) {
+                $data = $model->data;
+            } else {
+                $data = Json::decode($model->data);
+            };
+
+            // $data = Json::decode($model->data);
             if (!is_array($data)) {
                 $data = Json::decode($data);
             }

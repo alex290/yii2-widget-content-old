@@ -45,7 +45,6 @@ class WidgetDoc extends Model
         $model->weight = ContentWidget::find()->andWhere(['itemId' => $id])->andWhere(['modelName' => $modelName])->count();
         $this->weight = $model->weight;
         $this->model = $model;
-        
     }
 
     public function openModel($id)
@@ -53,7 +52,15 @@ class WidgetDoc extends Model
 
         $model = ContentWidget::findOne($id);
         if ($model != null) {
-            $data = Json::decode($model->data);
+
+            $data = [];
+            if (is_array($model->data)) {
+                $data = $model->data;
+            } else {
+                $data = Json::decode($model->data);
+            };
+
+            // $data = Json::decode($model->data);
             if (!is_array($data)) {
                 $data = Json::decode($data);
             }
@@ -89,7 +96,7 @@ class WidgetDoc extends Model
         if ($model->save()) {
             if ($this->file) {
                 $this->deleteFile();
-                $dir = $filePath.'/files/'. $modelName.'/'. $modelName . $model->id . '/';
+                $dir = $filePath . '/files/' . $modelName . '/' . $modelName . $model->id . '/';
                 FileHelper::createDirectory($dir);
                 $file = $this->file->baseName . '.' . $this->file->extension;
                 $path = $dir . $file;
@@ -118,7 +125,7 @@ class WidgetDoc extends Model
     {
         $model = $this->model;
         $modelName = $model->modelName;
-        $dir = 'upload/files/'. $modelName.'/'. $modelName . $model->id;
+        $dir = 'upload/files/' . $modelName . '/' . $modelName . $model->id;
         FileHelper::removeDirectory($dir);
     }
 }

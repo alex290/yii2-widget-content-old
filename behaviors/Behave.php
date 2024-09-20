@@ -49,16 +49,22 @@ class Behave extends Behavior
         if ($modelWidget != null) {
             foreach ($modelWidget as $key => $value) {
                 if ($value->type == 3) {
-                    $dataFile = Json::decode($value->data);
+
+                    $dataFile = [];
+                    if (is_array($value->data)) {
+                        $dataFile = $value->data;
+                    } else {
+                        $dataFile = Json::decode($value->data);
+                    };
                     if (!is_array($dataFile)) {
                         $dataFile = Json::decode($dataFile);
                     }
-                    if ($dataFile['file'] == null || $dataFile['file'] == ''){
+                    if ($dataFile['file'] == null || $dataFile['file'] == '') {
                         $articleDoc = new WidgetDoc();
                         $articleDoc->openModel($value->id);
                         $articleDoc->deleteFile();
                         $value->removeImages();
-                        $value->delete(); 
+                        $value->delete();
                     }
                 }
             }
