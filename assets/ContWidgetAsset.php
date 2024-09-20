@@ -16,7 +16,7 @@ use yii\web\AssetBundle;
  */
 class ContWidgetAsset extends AssetBundle
 {
-    public $sourcePath = '@alex290/widgetContent/assets/scr';
+    public $sourcePath = '@alex290/widgetContentOld/assets/scr';
     public $css = [
         'fileinput/css/fileinput.css',
         'fileinput/themes/explorer-fas/theme.css',

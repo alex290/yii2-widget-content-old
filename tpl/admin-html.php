@@ -23,12 +23,12 @@ $data = Json::encode([
         <?php foreach ($models as $key => $widget) : ?>
             <div class="card sortableWidgetContentItem" data-id=<?= $widget->id ?>>
                 <?php if ($widget->type == 1) : ?>
-                    <?= Yii::$app->view->render('@alex290/widgetContent/tpl/widget/text', [
+                    <?= Yii::$app->view->render('@alex290/widgetContentOld/tpl/widget/text', [
                         'widget' => $widget,
                     ]) ?>
 
                 <?php elseif ($widget->type == 2) : ?>
-                    <?= Yii::$app->view->render('@alex290/widgetContent/tpl/widget/image', [
+                    <?= Yii::$app->view->render('@alex290/widgetContentOld/tpl/widget/image', [
                         'widget' => $widget,
                     ]) ?>
                 <?php elseif ($widget->type == 3) : ?>
@@ -54,7 +54,7 @@ $data = Json::encode([
                         $widget->delete();
                         ?>
                     <?php else : ?>
-                        <?= Yii::$app->view->render('@alex290/widgetContent/tpl/widget/doc', [
+                        <?= Yii::$app->view->render('@alex290/widgetContentOld/tpl/widget/doc', [
                             'widget' => $widget,
                         ]) ?>
                     <?php endif ?>
