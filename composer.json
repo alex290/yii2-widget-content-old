@@ -1,6 +1,6 @@
 {
-    "name": "alex290/yii2-widget-content",
-    "description": "Widget content",
+    "name": "alex290/yii2-widget-content-old",
+    "description": "Widget content old",
     "type": "yii2-extension",
     "keywords": ["yii2", "extension"],
     "license": "MIT",
@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "alex290\\widgetContent\\": ""
+            "alex290\\widgetContentOld\\": ""
         }
     }
 }
