@@ -2,7 +2,7 @@
 
 
 
-namespace alex290\widgetContent\behaviors;
+namespace alex290\widgetContentOld\behaviors;
 
 // use alex290\yii2images\models\Image;
 

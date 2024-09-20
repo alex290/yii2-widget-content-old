@@ -1,6 +1,6 @@
 <?php
 
-namespace alex290\widgetContent\controllers;
+namespace alex290\widgetContentOld\controllers;
 
 use Yii;
 use yii\web\Controller;

@@ -1,6 +1,6 @@
 <?php
 
-namespace alex290\widgetContent\controllers;
+namespace alex290\widgetContentOld\controllers;
 
 use alex290\widgetContent\models\ContentWidget;
 use yii\helpers\Json;

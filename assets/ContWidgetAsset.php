@@ -1,7 +1,7 @@
 <?php
 
 
-namespace alex290\widgetContent\assets;
+namespace alex290\widgetContentOld\assets;
 
 use Yii;
 use yii\web\AssetBundle;

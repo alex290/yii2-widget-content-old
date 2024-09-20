@@ -1,6 +1,6 @@
 <?php
 
-namespace alex290\widgetContent\models;
+namespace alex290\widgetContentOld\models;
 
 use Codeception\Lib\Di;
 use Yii;

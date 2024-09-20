@@ -1,6 +1,6 @@
 <?php
 
-namespace alex290\widgetContent;
+namespace alex290\widgetContentOld;
 
 /**
  * This is just an example.
