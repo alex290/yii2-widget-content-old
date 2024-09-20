@@ -16,7 +16,7 @@ php composer.phar require --prefer-dist alex290/yii2-widget-content "*"
 or add
 
 ```
-"alex290/yii2-widget-content": "*"
+"alex290/yii2-widget-content-old": "*"
 ```
 
 to the require section of your `composer.json` file.
@@ -31,7 +31,7 @@ Once the extension is installed, simply use it in your code by  :
 
     'modules' => [
         'widget-content' => [
-            'class' => 'alex290\widgetContent\Module',
+            'class' => 'alex290\widgetContentOld\Module',
             'path' => 'upload', //path to files
             'ckeditorPath' => '/web/lib/ckeditor/ckeditor.js', // Путь к внешнему Ckeditor - Необязательно
             'ckeditorConfig' => '/web/lib/ckeditor/config-st.js', // Путь к конфигурации внешнего Ckeditor  - Необязательно
